@@ -9,7 +9,7 @@
    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
    <!-- bean definition & AOP specific configuration -->
-   
+   <aop:aspectj-autoproxy/>
    <bean name="triangle" class="com.springtest.model.Triangle">
    <property name="name" value="Triangle name"/>
    </bean>
@@ -19,5 +19,6 @@
    
    <bean name="shapeService" class="com.springtest.service.ShapeService" autowire="byName" >
    </bean>
+   <bean name="loggingAspect" class="com.springtest.aspect.LoggingAspect"></bean>
 
 </beans>
